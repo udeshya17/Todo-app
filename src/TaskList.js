@@ -19,8 +19,8 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
           type="checkbox"
           className="form-check-input me-2"
           checked={todo.hasCompleted}
-          onChange={() => completeTodo(index)}
-          style={{ border: "2px solid #333" }} 
+          onChange={() => completeTodo(index)}      //EventListener is called
+          style={{ border: "2px solid #333" }}  //checkbox styling
         />
         <label
           style={{
@@ -32,15 +32,9 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
         </label>
       </div>
       <div>
-        {/* <button
-          className="btn btn-primary me-2"
-          onClick={() => completeTodo(index)}
-        >
-          Complete
-        </button> */}
         <button
-          className="btn btn-danger"
-          onClick={() => removeTodo(index)}
+          className="btn btn-danger"        // remove button
+          onClick={() => removeTodo(index)}     //EventListener is called 
         >
           Remove
         </button>
